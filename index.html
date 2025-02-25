@@ -8,8 +8,29 @@
 <body>
     <h1> Working with Multimedia</h1>
     <h2> Video</h2>
-    <video controls loop muted autoplay preload="metadata"> <!-- autoplay isnt reliable as many browsers wont allow for it to play on auto. Autoplay cannot exist without "controls" preceeding it-->
+<div style="max-width: 700px;height: auto;">
+    <video controls loop muted preload="metadata"
+    poster="Assets/poster.webp"style="max-width: 100%;">
+    <!-- autoplay isnt reliable as many browsers wont allow for it to play on auto. Autoplay cannot exist without "controls" preceeding it-->
+
         <source  src="Assets/solar-system.mp4"> 
+        
+        <!--Could have  another video source if available. like <source src="media/solar-system.webm">-->
+
+        <track kind="captions" src="Assets/solar-system.vtt" default label="English" srclang="en"> 
+        
+        <!-- Nasa will have free VTT files so I can reference those and how to make one-. 
+         Summer job idea? typing out VTTS for companies??-->
+
     </video>
+</div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OAi_v4L2TnA?si=7aStpZQthmm5WPGE" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <h2> Audio Next </h2>
+    <audio controls>
+       <source src="Assets/waiting_for_a_train.ogg"> 
+       <source src="Assets/waiting_for_a_train.mp3">
+        your browser doesn't support audio playback
+    </audio>
 </body>
 </html>
